@@ -1,13 +1,13 @@
 build:
-	@docker build -t nvim .
+	@docker build -t nvim-pde .
 
 run: build
-	docker run -it -d --name nvim-ide nvim sh
+	docker run -it -d --name nvpde nvim-pde /bin/zsh
 
 exec:
-	docker exec -it nvim-ide /bin/zsh
+	docker exec -it nvpde /bin/zsh
 
 clean:
-	docker container stop nvim-ide
-	docker rm nvim-ide 
-	docker rmi nvim
+	docker container stop nvpde
+	docker rm nvpde
+	docker rmi nvim-pde
