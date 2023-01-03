@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 ## Make Sure You Source lua/stakt/packer and sync first
 #
 
@@ -37,11 +37,11 @@ curl -L \
     >> ${AFTER_PLUGIN_DIR}/feline.lua
 
 # Configure git to checkout after/pliugin directory
-git init
-git remote add -f origin https://github.com/suedoh/nvim-config.github
+# git init
+# git remote add -f origin https://github.com/suedoh/nvim-config.github
 
-git config core.sparseCheckout true
+# git config core.sparseCheckout true
 
-echo "after/plugin/" >> .git/info/sparse-checkout
+# echo "after/plugin/" >> .git/info/sparse-checkout
 
-git pull origin master
+# git pull origin master
